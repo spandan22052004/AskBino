@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f2f7ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.chat-box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    background: #d1e7ff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: fit-content;
+    max-width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.user {
+    align-self: flex-end;
+    background: #c1f0c1;
+}
+
+.cta-button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1da851;
+}
+
+.share {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.share a {
+    color: #1d72b8;
+    text-decoration: none;
+}
+
+.dots {
+    width: 50px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    opacity: 0;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
